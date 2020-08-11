@@ -27,4 +27,6 @@ The current project is done in the framework of the [Data Scientist Nanodegree a
 
 4) Go to http://0.0.0.0:3001/
 
+## Libraries
 
+To successfully reproduce my script on your machine, the following packages should be installed: pandas, nltk, numpy, sklearn, json, plotly, flask, sqlalchemy
