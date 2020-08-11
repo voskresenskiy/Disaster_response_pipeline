@@ -10,7 +10,7 @@ The current project is done in the framework of the [Data Scientist Nanodegree a
 
 - **ETL Pipeline Preparation** notebook contains all the steps needed for data cleaning, handling and saving the final dataset into SQL database. 
 - **ML Pipeline Preparation** notebook contains all my experiments with different classifiers
-- The folder **data** includes the file with disaster messages (*disaster_messages.scv*), the file with categories for these messages (*disaster_categories.csv*), the final database with cleaned and preprocessed dataset (*DisasterResponse.db*), and the Python script cleaning, merging, and saving data (*process_data.py*) (the script is made on the base of ETL Pipeline Preparation notebook)
+- The folder **data** includes disaster messages (*disaster_messages.scv*), categories for these messages (*disaster_categories.csv*), the final database with cleaned and preprocessed dataset (*DisasterResponse.db*), and the script cleaning, merging, and saving data (*process_data.py*) (the script is made on the base of ETL Pipeline Preparation notebook)
 - The folder **models** includes the customer transformer calculating some statistics for an input text (*custom_transformers.py*) and the script with the pipeline for the final model (*train_classifier.py*).
 - The folder **app** includes templates and script for launching the application.
 
