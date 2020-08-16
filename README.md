@@ -1,7 +1,5 @@
 # Disaster response pipeline
 
-Github repo link: https://github.com/voskresenskiy/Disaster_response_pipeline
-
 ## Project motivation 
 
 The current project is done in the framework of the [Data Scientist Nanodegree at Udacity](https://www.udacity.com/course/data-scientist-nanodegree--nd025) and includes two main goals:
