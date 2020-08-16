@@ -24,6 +24,7 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.model_selection import train_test_split
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
 
 from custom_transformers import text_stats
@@ -100,13 +101,20 @@ def main():
         model = build_model()
         
         print('Training model...')
-        model.fit(X_train['message'], Y_train)
+        
+        parameters = {
+            'clf__estimator__n_estimators': [300],
+            'clf__estimator__min_samples_split': [3, 4]
+        }
+        
+        grid_model = GridSearchCV(model, param_grid=parameters, verbose = 5, n_jobs = -1, cv=2, scoring = 'roc_auc')
+        grid_model.fit(X_train['message'], Y_train)
         
         print('Evaluating model...')
-        evaluate_model(model, X_test['message'], Y_test, category_names)
+        evaluate_model(grid_model, X_test['message'], Y_test, category_names)
 
         print('Saving model...\n    MODEL: {}'.format(model_filepath))
-        save_model(model, model_filepath)
+        save_model(grid_model, model_filepath)
 
         print('Trained model saved!')
 
